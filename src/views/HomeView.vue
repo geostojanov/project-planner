@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    Home
+    <div v-if="projects.length">
+      <div :key="project.id" v-for="project in projects">
+        <p>{{ project.title }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -9,6 +13,17 @@
 
 export default {
   name: 'HomeView',
-  components: {}
+  components: {},
+  data() {
+    return {
+      projects: []
+    }
+  },
+  mounted() {
+    fetch('http://localhost:3000/projects')
+      .then(res => res.json())
+      .then(data => this.projects = data)
+      .catch(err => console.log(err.message))
+  }
 }
 </script>
