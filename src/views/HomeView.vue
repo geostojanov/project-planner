@@ -2,7 +2,7 @@
   <div class="home">
     <div v-if="projects.length">
       <div :key="project.id" v-for="project in projects">
-        <p>{{ project.title }}</p>
+        <SingleProject :project="project" />
       </div>
     </div>
   </div>
@@ -10,10 +10,12 @@
 
 <script>
 // @ is an alias to /src
+import SingleProject from '../components/SingleProject.vue'
+
 
 export default {
   name: 'HomeView',
-  components: {},
+  components: { SingleProject },
   data() {
     return {
       projects: []
