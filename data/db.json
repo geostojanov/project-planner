@@ -4,18 +4,18 @@
       "id": 1,
       "title": "Create new homepage banner",
       "details": "Lorem ipsum",
-      "complete": false
+      "complete": true
     },
     {
       "id": 2,
-      "title": "Make marketing email",
-      "details": "Lorem ipsum",
-      "complete": false
+      "title": "Make marketing email Da nek si kjute samo",
+      "details": "da kjutejte si samo na nikoj ne raspravajte",
+      "complete": true
     },
     {
       "title": "create a new website",
       "details": "asdokdoaskdsa[d",
-      "complete": false,
+      "complete": true,
       "id": 3
     },
     {
@@ -27,8 +27,14 @@
     {
       "title": "Testing",
       "details": "admpaokdsapokda",
-      "complete": false,
+      "complete": true,
       "id": 5
+    },
+    {
+      "title": "Tmaspodkas",
+      "details": "asopkadkpas",
+      "complete": true,
+      "id": 6
     }
   ]
 }

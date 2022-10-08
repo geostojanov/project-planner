@@ -1,9 +1,11 @@
 <template>
   <div class="project" :class="{ complete: project.complete }">
     <div class="actions">
-      <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
+      <h3 :class="{ complete: project.complete }" @click="showDetails = !showDetails">{{ project.title }}</h3>
       <div class="icons">
-        <span class="material-icons">edit</span>
+        <router-link :to="{ name: 'EditProject', params: { id: project.id } }">
+          <span class="material-icons">edit</span>
+        </router-link>
         <span @click="deleteProject" class="material-icons">delete</span>
         <span @click="toggleComplete" class="material-icons tick">done</span>
       </div>
@@ -59,6 +61,9 @@ export default {
     justify-content: space-between;
     align-items: center;
   }
+  .actions h3.complete {
+    text-decoration: line-through;
+  }
   .material-icons {
     font-size: 24px;
     margin-left: 10px;
@@ -71,6 +76,8 @@ export default {
   /* completed projects */
   .project.complete {
     border-left: 4px solid #00ce89;
+    background: #026141;
+    color: #f3f3f3;
   }
   .project.complete .tick {
     color: #00ce89;

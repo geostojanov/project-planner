@@ -75,4 +75,7 @@ export default {
     border-radius: 6px;
     font-size: 16px;
   }
+  button {
+    cursor: pointer;
+  }
 </style>
